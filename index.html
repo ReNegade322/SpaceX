@@ -8,20 +8,70 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header class="head">
-        <img src="/assets/Logo.png" alt="SpaceX Logo">
-        <nav>
-            <a href="">Главная</a>
-            <a href="">Технология</a>
-            <a href="">График полетов</a>
-            <a href="">Гарантии</a>
-            <a href="">О Компании</a>
-            <a href="">Контакты</a>
-        </nav>
+    <header class="header">
+        <div class="container navigation">
+            <div class="logo">
+                <img class="corner" src="./assets/logo-deco/corner1.png">
+                <img class="corner" src="./assets/logo-deco/corner2.png">
+                <img class="corner" src="./assets/logo-deco/corner3.png">
+                <img class="corner" src="./assets/logo-deco/corner4.png">
+                <img class="logo--img" src="./assets/Logo.png" alt="SpaceX Logo">
+            </div>
+            <img class="hamb--menu" src="./assets/hamb.svg" alt="">
+            <nav class="links">
+                <a class="header--link" href="">Главная</a>
+                <a class="header--link" href="">Технология</a>
+                <a class="header--link" href="">График полетов</a>
+                <a class="header--link" href="">Гарантии</a>
+                <a class="header--link" href="">О компании</a>
+                <a class="header--link" href="">Контакты</a>
+            </nav>
+        </div>
     </header>
 
     <main class="main">
-        
+        <div class="container main--content">
+            <div>
+                <span class="sub-title">
+                    <h1 class="title">ПУТЕШЕСТВИЕ</h1>
+                    на красную планету</span>
+                <div class="btn-with-line">
+                    <div class="main--button">
+                        <img class="button--corner" src="./assets/btn-corner2.svg">
+                        <img class="button--corner" src="./assets/btn-corner1.svg">    
+                        <button class="cta--button">Начать путешествие</button>
+                    </div>    
+                    <img class="dec--line" src="./assets/line.png" alt="">
+                </div>
+            </div>
+    
+            <div class="advantages">
+                <div class="advantages--line">
+                    <div class="advantage" id="advantage--1">
+                        <p class="description--text">мы</p>
+                        <h1 class="description--num">1</h1>
+                        <p class="description--text">на рынке</p>
+                    </div>
+                    <div class="advantage" id="advantage--2">
+                        <p class="description--text">гарантируем</p>
+                        <h1 class="description--num">50%</h1>
+                        <p class="description--text">безопасность</p>
+                    </div>
+                </div>
+                <div class="advantages--line">
+                    <div class="advantage" id="advantage--3">
+                        <p class="description--text">календарик за</p>
+                        <h1 class="description--num">2001<span class="sub--num">г.</span></h1>
+                        <p class="description--text">в подарок</p>
+                    </div>
+                    <div class="advantage" id="advantage--4">
+                        <p class="description--text">путешествие</p>
+                        <h1 class="description--num">597</h1>
+                        <p class="description--text">дней</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
