@@ -186,7 +186,7 @@ table {
 .title{
     display: inline;
     font-size: 58px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-family: "MuseoSans"; 
     font-weight: 700;
     margin-top: 50px;
@@ -197,8 +197,9 @@ table {
     font-weight: 300;
     
     background: linear-gradient(100deg, rgba(255,255,255,1) 10%, rgba(255,63,4,1) 76%);
-    -webkit-box-decoration-break: clone;
+    background-clip: text;
     -webkit-background-clip: text;
+    text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
 }
 
