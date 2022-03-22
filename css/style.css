@@ -100,7 +100,8 @@ table {
 
     background: rgba(21, 10, 1, 0.4);
 
-    position: fixed;
+    position: absolute;
+    top: 0;
     width: 100%;
     height: 100px;
 
@@ -129,11 +130,12 @@ table {
 /* Main content */
 .main{
     background: url('../assets/background.png') top center repeat;
-    padding: 160px 0;
+    padding: 160px 0 0 0;
     height: 660px;
     box-sizing: border-box;
 }
 .main--content{
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -175,7 +177,12 @@ table {
 .dec--line{
     margin: 103px 0 0 10px;
 }
+.title--img{
+    margin-top: 50px;
+    width: 445px;
+}
 .title{
+    display: inline;
     font-size: 58px;
     letter-spacing: 2px;
     font-family: "MuseoSans"; 
@@ -184,9 +191,9 @@ table {
 }
 .sub-title{
     font-size: 25px;
-    display: block;
+    display: none;
     font-weight: 300;
-
+    
     background: linear-gradient(100deg, rgba(255,255,255,1) 10%, rgba(255,63,4,1) 76%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -210,6 +217,7 @@ table {
     margin: 5px;
     padding: 30px 15px;
     cursor: pointer;
+    transition: all 0.5s ease-out;
 }
 .description--text{
     font-size: 18px;
@@ -224,42 +232,42 @@ table {
 .sub--num{
     font-size: 20px;
 }
-#advantage--1{
+.advantage--1{
     background: linear-gradient(320deg, rgba(255,255,255,0.047) 0%, rgba(255,255,255,0) 45%);
 }
-#advantage--2{
+.advantage--2{
     background: linear-gradient(50deg, rgba(255,255,255,0.047) 0%, rgba(255,255,255,0) 45%);
+    padding-right: 0;
+    padding-left: 30px;
+    margin-right: 0;
+    width: 150px;
 }
-#advantage--3{
+.advantage--3{
     background: linear-gradient(220deg, rgba(255,255,255,0.047) 0%, rgba(255,255,255,0) 45%);
 }
-#advantage--4{
+.advantage--4{
     background: linear-gradient(130deg, rgba(255,255,255,0.047) 0%, rgba(255,255,255,0) 45%);
+    padding-right: 0;
+    padding-left: 30px;
+    margin-right: 0;
+    width: 150px;
 }
 
 /* Interaction */
 .advantage:hover{
     color: white;
 }
-#advantage--1:hover{
+.advantage--1:hover{
     background: linear-gradient(320deg, rgba(255,255,255,0.147) 0%, rgba(255,255,255,0) 45%);
-    border-image: linear-gradient(320deg, rgba(255,255,255,0.247) 0%, rgba(255,255,255,0) 45%);
-    border-image-slice: 1;
 }
-#advantage--2:hover{
+.advantage--2:hover{
     background: linear-gradient(50deg, rgba(255,255,255,0.147) 0%, rgba(255,255,255,0) 45%);
-    border-image: linear-gradient(50deg, rgba(255,255,255,0.247) 0%, rgba(255,255,255,0) 45%);
-    border-image-slice: 1;
 }
-#advantage--3:hover{
+.advantage--3:hover{
     background: linear-gradient(220deg, rgba(255,255,255,0.147) 0%, rgba(255,255,255,0) 45%);
-    border-image: linear-gradient(220deg, rgba(255,255,255,0.247) 0%, rgba(255,255,255,0) 45%);
-    border-image-slice: 1;
 }
-#advantage--4:hover{
+.advantage--4:hover{
     background: linear-gradient(130deg, rgba(255,255,255,0.147) 0%, rgba(255,255,255,0) 45%);
-    border-image: linear-gradient(130deg, rgba(255,255,255,0.247) 0%, rgba(255,255,255,0) 45%);
-    border-image-slice: 1;
 }
 .header--link:hover{
     color: #b1b1b1;
@@ -275,12 +283,20 @@ table {
     .dec--line{
         display: none;
     }
+    .title--img{
+        display: none;
+    }
+    .sub-title{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
 }
 @media (max-width: 1100px){
     .header--link{
         margin-left: 30px;
     }
-    .head{
+    .header{
         height: 60px;
     }
     .logo{
@@ -296,11 +312,17 @@ table {
         margin-left: 25px;
         font-size: 14px;
     }  
+    .logo{
+        padding: 16px 16px 24px 16px;;
+    }
     .logo--img{
-        max-width: 180px;
+        max-width: 160px;
     }
     .title{
         font-size: 45px;
+    }
+    .sub-title{
+        font-size: 18px;
     }
 }
 @media (max-width: 840px) {
@@ -315,12 +337,50 @@ table {
     .main--content{
         flex-direction: column;
     }
-    .advantages--line{
-        margin: 30px auto 0;
+    .advantages{
+        margin: 60px auto 0;
+    }
+    .advantage{
+        background: rgba(21, 4, 36, 0.144);
+        color: white;
+        width: 120px;
+        height: 120px;
+        padding: 15px 8px;
+    }
+    .title{
+        margin-top: 0;
+    }
+    .main--button{
+        margin-top: 60px;
+    }
+    .description--num{
+        font-size: 38px;
+    }
+    .description--text{
+        font-size: 14px;
+        margin-bottom: 14px;
     }
 }
-@media (max-width: 448px) {
-    .advantages--line {
+@media (max-width: 425px) {
+    .advantages{
         flex-direction: column;
+        margin: 60px auto 0;
+    }
+    .container{
+        padding: 0 16px;
+    }
+    .title{
+        font-size: 35px;
+    }
+    .sub-title{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .btn-with-line{
+        display: flex;
+        justify-content: center;
+    }
+    .advantages--line {
+        flex-direction: row;
     }
 }
