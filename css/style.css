@@ -73,6 +73,7 @@ table {
     position:relative;
     box-shadow: 1px 0px 0px 0px rgba(42, 42, 45, 0.5) inset,
                 -1px 0px 0px 0px rgba(42, 42, 45, 0.5) inset;
+    cursor: pointer;
 }
 .corner{
     position:absolute;
@@ -125,6 +126,7 @@ table {
 }
 .hamb--menu{
     display: none;
+    cursor: pointer;
 }
 
 /* Main content */
@@ -195,6 +197,7 @@ table {
     font-weight: 300;
     
     background: linear-gradient(100deg, rgba(255,255,255,1) 10%, rgba(255,63,4,1) 76%);
+    -webkit-box-decoration-break: clone;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -288,7 +291,7 @@ table {
     }
     .sub-title{
         width: fit-content;
-        display: flex;
+        display: block;
         flex-direction: column;
     }
 }
